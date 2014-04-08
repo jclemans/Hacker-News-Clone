@@ -1,0 +1,13 @@
+<% content_for(:title, "Hacker News") %>
+<h1 class="jumbotron">News Feed</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <%= link_to post.link, 'http://www.' + post.link %>
+      <button>+</button><span> </span><button>-</button>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add Link", new_post_path, :class=> "btn btn-default" %>

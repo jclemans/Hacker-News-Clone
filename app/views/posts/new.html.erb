@@ -1,0 +1,10 @@
+<h1>Add new link</h1>
+
+<%= form_for(@post) do |f| %>
+  <div class="form-group">
+    <%= f.label :link %>
+    <%= f.text_field :link %>
+  </div>
+  <%= f.submit 'Post Link', :class => "btn btn-primary" %>
+<% end %>
+
