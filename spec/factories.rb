@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :post, :class => Post do
-    link 'www.google.com'
+    link 'http://www.google.com'
   end
 end

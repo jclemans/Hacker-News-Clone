@@ -1,11 +1,16 @@
 <% content_for(:title, "Hacker News") %>
-<h1 class="jumbotron">News Feed</h1>
+<h1 class="jumbotron center">News Feed</h1>
 
 <ul>
   <% @posts.each do |post| %>
     <li>
-      <%= link_to post.link, 'http://www.' + post.link %>
-      <button>+</button><span> </span><button>-</button>
+      <%= link_to post.link, post.link %><br>
+      <%= post.votes.count %>
+      <%= form_for(post.votes.new) do |f| %>
+        <%= f.hidden_field(:post_id) %>
+        <%= f.submit(:class => "btn btn-primary") %>
+      <% end %>
+      <%#a href="/posts/#{post.id}/votes/" data-method="post"%>
     </li>
   <% end %>
 </ul>

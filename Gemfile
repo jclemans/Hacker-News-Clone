@@ -7,7 +7,6 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'pry'
 gem 'bootstrap'
 gem 'factory_girl_rails'
 
@@ -15,6 +14,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'bootstrap-sass'
 end
 
 group :test, :development do
@@ -24,4 +24,5 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'pry'
 end
